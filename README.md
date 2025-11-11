@@ -1,16 +1,16 @@
-## 关于此项目说明
-原项目地址为[rohitrango/automatic-watermark-detection: Project for Digital Image Processing](https://github.com/rohitrango/automatic-watermark-detection)
+## About This Project
+Original project: [rohitrango/automatic-watermark-detection: Project for Digital Image Processing](https://github.com/rohitrango/automatic-watermark-detection)
 
-因为有需求需要使用此项目解决视频去水印的问题，所以把此项目的源码大致看了。感觉写的不怎么好
-- 速度方面，tf版的梯度下降实在是太慢了，感觉是代码没写好的问题
-- 水印提取，图片变化要大一点才好，相似对提取效果不好
-- 水印匹配，这个代码实现出来的，我实际用的匹配得不怎么准。比如视频中抖音水印会变化，对于旋转不变性和尺度不变性有很大的优化空间
+I reviewed this project's source code because I needed to solve watermark removal issues in videos. I found several areas that could be improved:
+- **Speed**: The TensorFlow version using gradient descent is extremely slow, likely due to suboptimal code implementation.
+- **Watermark Extraction**: Works better when images vary significantly; performance suffers when images are too similar.
+- **Watermark Matching**: The matching accuracy isn't very good in practice. For example, TikTok watermarks in videos can change, and there's significant room for improvement in rotation invariance and scale invariance.
 
-关于上面那些短板，我针对视频识别水印都做了很大优化，对一个视频的识别，速度在ms级别，可以浏览我的项目：[待添加]()
+I've made substantial optimizations for video watermark detection. My improved version can process a video at millisecond-level speed. You can check out my project here: [To be added]()
 
-这个项目很简单，只是调了bug发上来。研究之后的成果，我后续会发上来，带有文档说明。
+This repository contains bug fixes from the original code. I'll be releasing my enhanced implementation with documentation in the future.
 
-以下为原版readme
+Below is the original README
 ---
 ## Automatic watermark detection and removal
 This was a project that was built as part of project for CS663 (Digital Image Processing).
